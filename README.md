@@ -1,4 +1,3 @@
-The content below is an example project proposal / requirements document. Replace the text below the lines marked "__TODO__" with details specific to your project. Remove the "TODO" lines.
 
 (__TODO__: your project name)
 
@@ -15,12 +14,15 @@ Shoppy Shoperson is a web app that will allow users to keep track of multiple gr
 
 ## Data Model
 
-(__TODO__: a description of your application's data and their relationships to each other) 
+The application will store Users, Listings, and Requests
+* Users: students who want to use the platform to buy/sell their leftover semester items
+* Listings: represents the items that students post for sale/giveaway
+* Requests: represents potential meetup agreements between buyers and sellers for purchasing/picking up  furniture
 
-The application will store Users, Lists and Items
-
-* users can have multiple lists (via references)
-* each list can have multiple items (by embedding)
+* Users can create multiple Listings (via references).
+* Users can initiate multiple Requests (via references).
+* Listings can have multiple Requests associated with them (via references).
+* Each Request is linked to only one Listing (via references) 
 
 (__TODO__: sample documents)
 
@@ -28,24 +30,63 @@ An Example User:
 
 ```javascript
 {
-  username: "shannonshopper",
-  hash: // a password hash,
-  lists: // an array of references to List documents
+  username: "student123",
+  email: "student123@example.com",
+  passwordHash: "hashedpassword",
+  listings: ["listingId1", "listingId2"], // references to listings posted by user
+  requests: ["requestId1", "requestId2"], // references to requests made by user
+  ratings: {
+    asSeller: {
+      totalScore: 45, // total score from all ratings as a seller
+      count: 10 // number of ratings received as a seller
+    },
+    asBuyer: {
+      totalScore: 35, // total score from all ratings as a buyer
+      count: 7 // number of ratings received as a buyer
+    }
+  },
+  createdAt: //date and time created
 }
+
 ```
 
-An Example List with Embedded Items:
+An Example Listing:
 
 ```javascript
 {
-  user: // a reference to a User object
-  name: "Breakfast foods",
-  items: [
-    { name: "pancakes", quantity: "9876", checked: false},
-    { name: "ramen", quantity: "2", checked: true},
-  ],
-  createdAt: // timestamp
+  title: "Desk",
+  description: "A wooden desk in good condition.",
+  price: 50,
+  images: ["image1.jpg", "image2.jpg"],
+  status: "Available",
+  seller: "userId123", // reference to the user (seller)
+  requests: ["requestId1", "requestId3"], // references to requests made for this listing
+  postedAt: //date and time posted
 }
+
+```
+
+An Example Request:
+
+```javascript
+{
+  listing: "listingId1", 
+  buyer: "userId456", 
+  seller: "userId123", 
+  scheduledDate: //date and time for proposed meetup,
+  location: "Dorm Lobby",
+  status: "Completed",
+  buyerRating: {
+    score: 4, // rating given by the seller to the buyer after meetup
+    feedback: "Buyer was easy to deal with."
+  },
+  sellerRating: {
+    score: 5, // Rating given by the buyer to the seller after meetup
+    feedback: "Great seller, item as described."
+  },
+  createdAt: //time created 
+}
+
 ```
 
 
@@ -141,8 +182,4 @@ An Example List with Embedded Items:
 
 ## Annotations / References Used
 
-(__TODO__: list any tutorials/references/etc. that you've based your code off of)
-
-1. [passport.js authentication docs](http://passportjs.org/docs) - (add link to source code that was based on this)
-2. [tutorial on vue.js](https://vuejs.org/v2/guide/) - (add link to source code that was based on this)
-
+None so far
