@@ -4,9 +4,9 @@
 
 ## Overview
 
-CampusClearOut is a designed for university students to buy, sell, or give away furniture and other items at the end of the semester. Managing multiple listings across various platforms can be overwhelming and inefficient. CampusClearOut makes this process easier by providing a single, secure space where students can easily post their items, browse available listings, and coordinate meetups for pickups.
+CampusClearOut is a web platform designed for university students to buy, sell, or give away furniture and other items at the end of the semester. Managing multiple listings across various platforms can be overwhelming and annoying. CampusClearOut makes this process easier by providing a single, secure space where students can easily post their items, browse available listings, and coordinate meetups for pickups.
 
-Users can register using their university credentials to ensure safety and community exclusivity. Once logged in, students can list their items, browse others’ posts, and schedule meetups to exchange goods. The platform features a built-in rating system, allowing sellers and buyers to rate each other’s reliability, including marking "no-shows" for missed meetups.
+Once students have registered and logged in, they can list their items, browse others’ posts, and schedule meetups to exchange goods. The platform features a built-in rating system, allowing sellers and buyers to rate each other’s reliability, including marking "no-shows" for missed meetups to keep things transparent for other students.
 
 ## Data Model
 
@@ -84,7 +84,7 @@ An Example Request:
 
 ```
 
-## [Link to Commented First Draft Schema](db.mjs) 
+## [Click Here for Commented First Draft Schema](db.mjs) 
 
 
 ## Wireframes
@@ -167,7 +167,7 @@ An Example Request:
 10 points total out of 10 required points 
 
 
-## [Link to Initial Main Project File](app.mjs) 
+## [Click Here for Initial Main Project File](app.mjs) 
 
 (__TODO__: create a skeleton Express application with a package.json, app.mjs, views folder, etc. ... and link to your initial app.mjs)
 
