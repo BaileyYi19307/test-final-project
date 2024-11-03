@@ -59,10 +59,10 @@ An Example List with Embedded Items:
 
 /login - page for users to log into their accounts
 ![login](documentation/login.png)
-<!-- 
+
 /register - page for users to create a new account
 ![register](documentation/register.png)
-
+<!-- 
 /listings - homepage displaying all available listings
 ![listings](documentation/listings.png)
 
@@ -103,8 +103,8 @@ An Example List with Embedded Items:
 
 
 /dashboard/my-requests/:requestId/rate - page for the user to rate a specific request (e.g., rating "0 stars - no show" when the seller fails to show up with the item)
-![dashboard myrequests requestId rate](documentation/dashboardmyrequestsrequestIdrate.png) -->
-
+![dashboard myrequests requestId rate](documentation/dashboardmyrequestsrequestIdrate.png)
+ -->
 
 
 ## Site map
