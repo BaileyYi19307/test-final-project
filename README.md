@@ -166,10 +166,7 @@ An Example Request:
 
 10 points total out of 10 required points 
 
-
 ## [Click Here for Initial Main Project File](app.mjs) 
-
-(__TODO__: create a skeleton Express application with a package.json, app.mjs, views folder, etc. ... and link to your initial app.mjs)
 
 ## Annotations / References Used
 

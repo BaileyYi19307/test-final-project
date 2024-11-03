@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
 
+mongoose.connect(process.env.DSN);
+
 // User schema
 // stores information about users, including their posted listings, initiated requests, and ratings as both a seller and a buyer
 const userSchema = new mongoose.Schema({
