@@ -9,17 +9,26 @@ CampusClearOut is a web platform designed for university students to buy, sell, 
 Once students have registered and logged in, they can list their items, browse others’ posts, and schedule meetups to exchange goods. The platform is intended to feature a built-in rating system, allowing sellers and buyers to rate each other’s reliability, including marking "no-shows" for missed meetups to keep things transparent for other students.
 
 ## Data Model
+The application will store three main types of documents: Users, Listings, and Requests
 
-The application will store Users, Listings, and Requests
-* Users: students who want to use the platform to buy/sell their leftover semester items
-* Listings: represents the items that students post for sale/giveaway
-* Requests: represents potential meetup agreements between buyers and sellers for purchasing/picking up  furniture
+1. Users
+   Represents students who use the platform to buy or sell their leftover semester items
+   Relationships:
+       Users can create multiple Listings (via references)
+       Users can initiate multiple Requests (via references)
+3. Listings
+   Represents items that students post for sale or giveaway
+   Relationships:
+       Listings can have multiple Requests associated with them (via references)
+4. Requests
+   Represents potential meetup agreements between buyers and sellers for purchasing or picking up items
+   Relationships:
+       Each Request is linked to only one Listing (via references)
 
-* Users can create multiple Listings (via references).
-* Users can initiate multiple Requests (via references).
-* Listings can have multiple Requests associated with them (via references).
-* Each Request is linked to only one Listing (via references) 
-
+Relationship Summary:
+  Users → Can create multiple Listings and initiate multiple Requests
+  Listings → Can have multiple Requests
+  Requests → Are linked to one Listing
 
 An Example User:
 
