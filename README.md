@@ -82,7 +82,7 @@ An Example List with Embedded Items:
 ![dashboard mylistings listingId requests](documentation/dashboardmylistingslistingIdrequests.png)
 
 /dashboard/my-listings/:listingId/requests/:requestId/rate - page for the user to rate a specific request on one of their listings (e.g., rating "0 stars - no show" when a requester fails to pick up an item).
-![dashboard mylistings listingId requests requestId rate](documentation/dashboardmylistingslistingIdrequestsrequestIdrate.png)
+![dashboard mylistings listingId requests requestId rate](documentation/dashboardmyrequestsrequestIdrate.png)
 
 /dashboard/my-requests - page displaying all requests submitted by the user
 ![dashboard myrequests](documentation/dashboardmyrequests.png)
