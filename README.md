@@ -58,52 +58,52 @@ An Example List with Embedded Items:
 (__TODO__: wireframes for all of the pages on your site; they can be as simple as photos of drawings or you can use a tool like Balsamiq, Omnigraffle, etc.)
 
 /login - page for users to log into their accounts
-![login](documentation/login.jpg)
+![login](documentation/login.png)
 
 /register - page for users to create a new account
-![register](documentation/register.jpg)
+![register](documentation/register.png)
 
 /listings - homepage displaying all available listings
-![listings](documentation/listings.jpg)
+![listings](documentation/listings.png)
 
 /listings/:postId - page for showing a specific listing post
-![listings/:postId](documentation/listingspostId.jpg)
+![listings postId](documentation/listingspostId.png)
 
 
 /listings/:postId/makeRequest - page for requesting a specific listing (item listed)
-![listings/:postId/makeRequest](documentation/listingspostIdmakeRequest.jpg)
+![listings postId makeRequest](documentation/listingspostIdmakeRequest.png)
 
 
 /dashboard - page for displaying overview of account activities
-![dashboard](documentation/dashboard.jpg)
+![dashboard](documentation/dashboard.png)
 
 
 /dashboard/my-listings - page showing all listings created by user
-![dashboard/my-listings](documentation/dashboardmylistings.jpg)
+![dashboard mylistings](documentation/dashboardmylistings.png)
 
 
 /dashboard/my-listings/create - page for users to create a new listing
-![dashboard/my-listings/create](documentation/dashboardmylistingscreate.jpg)
+![dashboard mylistings create](documentation/dashboardmylistingscreate.png)
 
 
 /dashboard/my-listings/:listingId/requests - page showing all requests others have made on a specific listing of the user
-![dashboard/my-listings/:listingId/requests](documentation/dashboardmylistingslistingIdrequests.jpg)
+![dashboard mylistings listingId requests](documentation/dashboardmylistingslistingIdrequests.png)
 
 
 /dashboard/my-listings/:listingId/requests/:requestId/rate - page for the user to rate a specific request on one of their listings (e.g., rating "0 stars - no show" when a requester fails to pick up an item).
 
-![dashboard/my-listings/:listingId/requests/:requestId/rate](documentation/dashboardmylistingslistingIdrequestsrequestIdrate.jpg)
+![dashboard mylistings listingId requests requestId rate](documentation/dashboardmylistingslistingIdrequestsrequestIdrate.png)
 
 
 /dashboard/my-requests - page displaying all requests submitted by the user
-![dashboard/my-requests](documentation/dashboardmyrequests.jpg)
+![dashboard myrequests](documentation/dashboardmyrequests.png)
 
 /dashboard/my-requests/:requestId - page for viewing details of a specific request made by the user
-![dashboard/my-requests/:requestId](documentation/dashboardmyrequestsrequestId.jpg)
+![dashboard myrequests requestId](documentation/dashboardmyrequestsrequestId.png)
 
 
 /dashboard/my-requests/:requestId/rate - page for the user to rate a specific request (e.g., rating "0 stars - no show" when the seller fails to show up with the item)
-![dashboard/my-requests/:requestId/rate](documentation/dashboardmyrequestsrequestIdrate.jpg)
+![dashboard myrequests requestId rate](documentation/dashboardmyrequestsrequestIdrate.png)
 
 
 
