@@ -58,7 +58,7 @@ An Example List with Embedded Items:
 (__TODO__: wireframes for all of the pages on your site; they can be as simple as photos of drawings or you can use a tool like Balsamiq, Omnigraffle, etc.)
 
 /login - page for users to log into their accounts
-![login](documentation/login.png)
+![login](documentation/login.png){width=400px}
 
 /register - page for users to create a new account
 ![register](documentation/register.png)
@@ -108,7 +108,7 @@ An Example List with Embedded Items:
 
 
 ## Site map
-![Site Map](documentation/site-map.jpg)
+![Site Map](documentation/site-map.png)
 
 
 ## User Stories or Use Cases
