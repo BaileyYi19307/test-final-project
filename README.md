@@ -4,9 +4,9 @@
 
 ## Overview
 
-CampusClearOut is a web platform designed for university students to buy, sell, or give away furniture and other items at the end of the semester. Managing multiple listings across various platforms can be overwhelming and annoying. CampusClearOut makes this process easier by providing a single, secure space where students can easily post their items, browse available listings, and coordinate meetups for pickups.
+CampusClearOut is a web platform designed for university students to buy, sell, or give away furniture and other items at the end of the semester. Managing multiple listings across various platforms can be overwhelming and annoying. CampusClearOut makes this process easier by providing a single spot where students can easily post their items, browse available listings, and coordinate meetups for pickups.
 
-Once students have registered and logged in, they can list their items, browse others’ posts, and schedule meetups to exchange goods. The platform features a built-in rating system, allowing sellers and buyers to rate each other’s reliability, including marking "no-shows" for missed meetups to keep things transparent for other students.
+Once students have registered and logged in, they can list their items, browse others’ posts, and schedule meetups to exchange goods. The platform is intended to feature a built-in rating system, allowing sellers and buyers to rate each other’s reliability, including marking "no-shows" for missed meetups to keep things transparent for other students.
 
 ## Data Model
 
