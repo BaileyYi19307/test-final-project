@@ -59,7 +59,7 @@ An Example List with Embedded Items:
 
 /login - page for users to log into their accounts
 ![login](documentation/login.png)
-
+<!-- 
 /register - page for users to create a new account
 ![register](documentation/register.png)
 
@@ -103,22 +103,9 @@ An Example List with Embedded Items:
 
 
 /dashboard/my-requests/:requestId/rate - page for the user to rate a specific request (e.g., rating "0 stars - no show" when the seller fails to show up with the item)
-![dashboard myrequests requestId rate](documentation/dashboardmyrequestsrequestIdrate.png)
+![dashboard myrequests requestId rate](documentation/dashboardmyrequestsrequestIdrate.png) -->
 
 
-
-
-/list/create - page for creating a new shopping list
-
-![list create](documentation/list-create.png)
-
-/list - page for showing all shopping lists
-
-![list](documentation/list.png)
-
-/list/slug - page for showing specific shopping list
-
-![list](documentation/list-slug.png)
 
 ## Site map
 ![Site Map](documentation/site-map.jpg)
