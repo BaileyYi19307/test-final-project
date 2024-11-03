@@ -1,16 +1,12 @@
 
-(__TODO__: your project name)
 
-# Shoppy Shoperson 
+# CampusClearOut
 
 ## Overview
 
-(__TODO__: a brief one or two paragraph, high-level description of your project)
+CampusClearOut is a designed for university students to buy, sell, or give away furniture and other items at the end of the semester. Managing multiple listings across various platforms can be overwhelming and inefficient. CampusClearOut makes this process easier by providing a single, secure space where students can easily post their items, browse available listings, and coordinate meetups for pickups.
 
-Remembering what to buy at the grocery store is waaaaay too difficult. Also, shopping for groceries when you're hungry leads to regrettable purchases. Sooo... that's where Shoppy Shoperson comes in!
-
-Shoppy Shoperson is a web app that will allow users to keep track of multiple grocery lists. Users can register and login. Once they're logged in, they can create or view their grocery list. For every list that they have, they can add items to the list or cross off items.
-
+Users can register using their university credentials to ensure safety and community exclusivity. Once logged in, students can list their items, browse others’ posts, and schedule meetups to exchange goods. The platform features a built-in rating system, allowing sellers and buyers to rate each other’s reliability, including marking "no-shows" for missed meetups.
 
 ## Data Model
 
@@ -24,7 +20,6 @@ The application will store Users, Listings, and Requests
 * Listings can have multiple Requests associated with them (via references).
 * Each Request is linked to only one Listing (via references) 
 
-(__TODO__: sample documents)
 
 An Example User:
 
@@ -89,10 +84,9 @@ An Example Request:
 
 ```
 
-
 ## [Link to Commented First Draft Schema](db.mjs) 
 
-(__TODO__: create a first draft of your Schemas in db.mjs and link to it)
+
 ## Wireframes
 
 /login - page for users to log into their accounts
@@ -157,7 +151,6 @@ An Example Request:
 14. As a user, I can rate and review the other party (buyer or seller) after a completed or missed meetup
 
 
-
 ## Research Topics
 
 (__TODO__: the research topics that you're planning on working on along with their point values... and the total points of research topics listed)
@@ -165,15 +158,13 @@ An Example Request:
 * (5 points) Integrate user authentication
     * I'm going to be using passport for user authentication
     * And account has been made for testing; I'll email you the password
-    * see <code>cs.nyu.edu/~jversoza/ait-final/register</code> for register page
-    * see <code>cs.nyu.edu/~jversoza/ait-final/login</code> for login page
 * (4 points) Perform client side form validation using a JavaScript library
     * see <code>cs.nyu.edu/~jversoza/ait-final/my-form</code>
     * if you put in a number that's greater than 5, an error message will appear in the dom
 * (5 points) vue.js
     * used vue.js as the frontend framework; it's a challenging library to learn, so I've assigned it 5 points
 
-10 points total out of 8 required points (___TODO__: addtional points will __not__ count for extra credit)
+10 points total out of 10 required points 
 
 
 ## [Link to Initial Main Project File](app.mjs) 
