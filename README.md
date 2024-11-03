@@ -54,57 +54,45 @@ An Example List with Embedded Items:
 (__TODO__: create a first draft of your Schemas in db.mjs and link to it)
 
 ## Wireframes
-
-(__TODO__: wireframes for all of the pages on your site; they can be as simple as photos of drawings or you can use a tool like Balsamiq, Omnigraffle, etc.)
-
 /login - page for users to log into their accounts
-![login](documentation/login.png){width=400px}
+<img src="documentation/login.png" width="200">
 
 /register - page for users to create a new account
-![register](documentation/register.png)
-<!-- 
+<img src="documentation/register.png" width="200">
+
 /listings - homepage displaying all available listings
-![listings](documentation/listings.png)
+<img src="documentation/listings.png" width="200">
 
 /listings/:postId - page for showing a specific listing post
-![listings postId](documentation/listingspostId.png)
-
+<img src="documentation/listingspostId.png" width="200">
 
 /listings/:postId/makeRequest - page for requesting a specific listing (item listed)
-![listings postId makeRequest](documentation/listingspostIdmakeRequest.png)
-
+<img src="documentation/listingspostIdmakeRequest.png" width="200">
 
 /dashboard - page for displaying overview of account activities
-![dashboard](documentation/dashboard.png)
-
+<img src="documentation/dashboard.png" width="200">
 
 /dashboard/my-listings - page showing all listings created by user
-![dashboard mylistings](documentation/dashboardmylistings.png)
-
+<img src="documentation/dashboardmylistings.png" width="200">
 
 /dashboard/my-listings/create - page for users to create a new listing
-![dashboard mylistings create](documentation/dashboardmylistingscreate.png)
-
+<img src="documentation/dashboardmylistingscreate.png" width="200">
 
 /dashboard/my-listings/:listingId/requests - page showing all requests others have made on a specific listing of the user
-![dashboard mylistings listingId requests](documentation/dashboardmylistingslistingIdrequests.png)
-
+<img src="documentation/dashboardmylistingslistingIdrequests.png" width="200">
 
 /dashboard/my-listings/:listingId/requests/:requestId/rate - page for the user to rate a specific request on one of their listings (e.g., rating "0 stars - no show" when a requester fails to pick up an item).
-
-![dashboard mylistings listingId requests requestId rate](documentation/dashboardmylistingslistingIdrequestsrequestIdrate.png)
-
+<img src="documentation/dashboardmylistingslistingIdrequestsrequestIdrate.png" width="200">
 
 /dashboard/my-requests - page displaying all requests submitted by the user
-![dashboard myrequests](documentation/dashboardmyrequests.png)
+<img src="documentation/dashboardmyrequests.png" width="200">
 
 /dashboard/my-requests/:requestId - page for viewing details of a specific request made by the user
-![dashboard myrequests requestId](documentation/dashboardmyrequestsrequestId.png)
-
+<img src="documentation/dashboardmyrequestsrequestId.png" width="200">
 
 /dashboard/my-requests/:requestId/rate - page for the user to rate a specific request (e.g., rating "0 stars - no show" when the seller fails to show up with the item)
-![dashboard myrequests requestId rate](documentation/dashboardmyrequestsrequestIdrate.png)
- -->
+<img src="documentation/dashboardmyrequestsrequestIdrate.png" width="200">
+
 
 
 ## Site map
