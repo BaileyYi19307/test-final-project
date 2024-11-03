@@ -100,14 +100,22 @@ An Example List with Embedded Items:
 
 ## User Stories or Use Cases
 
-(__TODO__: write out how your application will be used through [user stories](http://en.wikipedia.org/wiki/User_story#Format) and / or [use cases](https://en.wikipedia.org/wiki/Use_case))
+1. As a non-registered user, I can register a new account with the site
+2. As a user, I can log in to the site
+3. As a user, I can browse all available listings on the homepage
+4. As a user, I can create a new listing to sell or give away an item from my dashboard
+5. As a user, I can view all of the listings I have created on the "My Listings" page
+6. As a user, I can edit or remove an existing listing I created from my "My Listings" page
+7. As a user, I can view detailed information about any listing I am interested in
+8. As a user, I can submit a request to schedule a meetup for a specific listing
+9. As a user, I can view and manage requests for my listings on a page dedicated to each listing's requests
+10. As a user, I can approve, decline, or suggest changes to a proposed meetup for a request on one of my listings
+11. As a user, I can view all of my submitted requests in a single list on the "My Requests" page
+12. As a user, I can check the status of my submitted requests, including approved, pending, or declined
+13. As a user, I can report a no-show after the scheduled meetup
+14. As a user, I can rate and review the other party (buyer or seller) after a completed or missed meetup
 
-1. as non-registered user, I can register a new account with the site
-2. as a user, I can log in to the site
-3. as a user, I can create a new grocery list
-4. as a user, I can view all of the grocery lists I've created in a single list
-5. as a user, I can add items to an existing grocery list
-6. as a user, I can cross off items in an existing grocery list
+
 
 ## Research Topics
 
