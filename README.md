@@ -11,24 +11,27 @@ Once students have registered and logged in, they can list their items, browse o
 ## Data Model
 The application will store three main types of documents: Users, Listings, and Requests
 
-1. Users
-   Represents students who use the platform to buy or sell their leftover semester items
-   Relationships:
-       Users can create multiple Listings (via references)
-       Users can initiate multiple Requests (via references)
-3. Listings
-   Represents items that students post for sale or giveaway
-   Relationships:
-       Listings can have multiple Requests associated with them (via references)
-4. Requests
-   Represents potential meetup agreements between buyers and sellers for purchasing or picking up items
-   Relationships:
-       Each Request is linked to only one Listing (via references)
 
-Relationship Summary:
-  Users → Can create multiple Listings and initiate multiple Requests
-  Listings → Can have multiple Requests
-  Requests → Are linked to one Listing
+1. **Users**
+   - Represents students who use the platform to buy or sell their leftover semester items
+   - **Relationships**:
+     - Users can create multiple Listings (via references)
+     - Users can initiate multiple Requests (via references)
+
+2. **Listings**
+   - Represents items that students post for sale or giveaway
+   - **Relationships**:
+     - Listings can have multiple Requests associated with them (via references)
+
+3. **Requests**
+   - Represents potential meetup agreements between buyers and sellers for purchasing or picking up items
+   - **Relationships**:
+     - Each Request is linked to only one Listing (via references)
+
+**Relationship Summary**:
+- **Users** → Can create multiple **Listings** and initiate multiple **Requests**
+- **Listings** → Can have multiple **Requests**
+- **Requests** → Are linked to one **Listing**
 
 An Example User:
 
