@@ -176,6 +176,7 @@ An Example Request:
 **Total Points**: 12 points out of 10 required points
 
 ## [Click Here for Initial Main Project File](app.mjs) 
+- Check the repository for the added files (i.e. views folder, .gitignore, package.json, etc)
 
 ## Annotations / References Used
 
