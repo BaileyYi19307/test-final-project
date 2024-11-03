@@ -165,25 +165,29 @@ An Example Request:
 
 ## Research Topics
 
-* (4 points) Using React as the frontend framework
-    * Using React as the frontend framework
-    * React is a JavaScript library for building user interfaces using reusable components, making frontend development modular
-    * Because I haven’t worked with React before, I’m assigning it 4 points due to the learning curve
-* (2 points) Bootstrap to help develop the frontend
-    * Css framework that provides pre-styled components and a responsive grid system to design and build responsive web applications faster
-    * I have also never worked with it before, so I’m assigning it 2 points for learning and integration.
-* (2 points) Integrate user authentication
-    * I will be using Passport.js for handling user authentication.
-    * Passport.js is an authentication middleware for Node.js that supports user login and sessions securely
-* (2 points) Integrate real-time notifications and updates
-    * I plan to use Socket.IO to integrate real-time notifications and updates for buyers when sellers respond to requests or update meetings and vice versa
-    * Socket.IO is a Javascript library that enables real-time, bidirectional communication between the server and clients
-* (1 point) Google Maps API
-    * I will use the Google Maps API to indicate pickup locations and enable users to view items by proximity
-    * Google Maps API is a service that allows developers to embed maps and location-based functionalities into web applications
-* (1 point) Email notifications  
-    * I will use Nodemailer, a Node.js library, to send email notifications like welcome emails and password reset links
-    * Nodemailer is a module that simplifies sending emails from a Node.js application
+- **(4 points) Using React as the frontend framework**
+  - React is a JavaScript library for building user interfaces using reusable components, making frontend development modular
+  - Because I haven’t worked with React before, I’m assigning it 4 points due to the learning curve
+
+- **(2 points) Bootstrap to help develop the frontend**
+  - Bootstrap is a CSS framework that provides pre-styled components and a responsive grid system to design and build responsive web applications faster
+  - I have also never worked with it before, so I’m assigning it 2 points for learning and integration
+
+- **(2 points) Integrate user authentication**
+  - I will be using Passport.js for handling user authentication
+  - Passport.js is an authentication middleware for Node.js that supports user login and sessions securely
+
+- **(2 points) Integrate real-time notifications and updates**
+  - I plan to use Socket.IO to integrate real-time notifications and updates for buyers when sellers respond to requests or update meetings and vice versa
+  - Socket.IO is a JavaScript library that enables real-time, bidirectional communication between the server and clients
+
+- **(1 point) Google Maps API**
+  - I will use the Google Maps API to indicate pickup locations and enable users to view items by proximity
+  - Google Maps API is a service that allows developers to embed maps and location-based functionalities into web applications
+
+- **(1 point) Email notifications**
+  - I will use Nodemailer, a Node.js library, to send email notifications like welcome emails and password reset links
+  - Nodemailer is a module that simplifies sending emails from a Node.js application
 
 **Total Points**: 12 points out of 10 required points
 
