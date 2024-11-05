@@ -9,17 +9,29 @@ CampusClearOut is a web platform designed for university students to buy, sell, 
 Once students have registered and logged in, they can list their items, browse others’ posts, and schedule meetups to exchange goods. The platform is intended to feature a built-in rating system, allowing sellers and buyers to rate each other’s reliability, including marking "no-shows" for missed meetups to keep things transparent for other students.
 
 ## Data Model
+The application will store three main types of documents: Users, Listings, and Requests
 
-The application will store Users, Listings, and Requests
-* Users: students who want to use the platform to buy/sell their leftover semester items
-* Listings: represents the items that students post for sale/giveaway
-* Requests: represents potential meetup agreements between buyers and sellers for purchasing/picking up  furniture
 
-* Users can create multiple Listings (via references).
-* Users can initiate multiple Requests (via references).
-* Listings can have multiple Requests associated with them (via references).
-* Each Request is linked to only one Listing (via references) 
+1. **Users**
+   - Represents students who use the platform to buy or sell their leftover semester items
+   - **Relationships**:
+     - Users can create multiple Listings (via references)
+     - Users can initiate multiple Requests (via references)
 
+2. **Listings**
+   - Represents items that students post for sale or giveaway
+   - **Relationships**:
+     - Listings can have multiple Requests associated with them (via references)
+
+3. **Requests**
+   - Represents potential meetup agreements between buyers and sellers for purchasing or picking up items
+   - **Relationships**:
+     - Each Request is linked to only one Listing (via references)
+
+**Relationship Summary**:
+- **Users** → Can create multiple **Listings** and initiate multiple **Requests**
+- **Listings** → Can have multiple **Requests**
+- **Requests** → Are linked to one **Listing**
 
 An Example User:
 
@@ -153,25 +165,29 @@ An Example Request:
 
 ## Research Topics
 
-* (4 points) Using React as the frontend framework
-    * Using React as the frontend framework
-    * React is a JavaScript library for building user interfaces using reusable components, making frontend development modular
-    * Because I haven’t worked with React before, I’m assigning it 4 points due to the learning curve
-* (2 points) Bootstrap to help develop the frontend
-    * Css framework that provides pre-styled components and a responsive grid system to design and build responsive web applications faster
-    * I have also never worked with it before, so I’m assigning it 2 points for learning and integration.
-* (2 points) Integrate user authentication
-    * I will be using Passport.js for handling user authentication.
-    * Passport.js is an authentication middleware for Node.js that supports user login and sessions securely
-* (2 points) Integrate real-time notifications and updates
-    * I plan to use Socket.IO to integrate real-time notifications and updates for buyers when sellers respond to requests or update meetings and vice versa
-    * Socket.IO is a Javascript library that enables real-time, bidirectional communication between the server and clients
-* (1 point) Google Maps API
-    * I will use the Google Maps API to indicate pickup locations and enable users to view items by proximity
-    * Google Maps API is a service that allows developers to embed maps and location-based functionalities into web applications
-* (1 point) Email notifications  
-    * I will use Nodemailer, a Node.js library, to send email notifications like welcome emails and password reset links
-    * Nodemailer is a module that simplifies sending emails from a Node.js application
+- **(4 points) Using React as the frontend framework**
+  - React is a JavaScript library for building user interfaces using reusable components, making frontend development modular
+  - Because I haven’t worked with React before, I’m assigning it 4 points due to the learning curve
+
+- **(2 points) Bootstrap to help develop the frontend**
+  - Bootstrap is a CSS framework that provides pre-styled components and a responsive grid system to design and build responsive web applications faster
+  - I have also never worked with it before, so I’m assigning it 2 points for learning and integration
+
+- **(2 points) Integrate user authentication**
+  - I will be using Passport.js for handling user authentication
+  - Passport.js is an authentication middleware for Node.js that supports user login and sessions securely
+
+- **(2 points) Integrate real-time notifications and updates**
+  - I plan to use Socket.IO to integrate real-time notifications and updates for buyers when sellers respond to requests or update meetings and vice versa
+  - Socket.IO is a JavaScript library that enables real-time, bidirectional communication between the server and clients
+
+- **(1 point) Google Maps API**
+  - I will use the Google Maps API to indicate pickup locations and enable users to view items by proximity
+  - Google Maps API is a service that allows developers to embed maps and location-based functionalities into web applications
+
+- **(1 point) Email notifications**
+  - I will use Nodemailer, a Node.js library, to send email notifications like welcome emails and password reset links
+  - Nodemailer is a module that simplifies sending emails from a Node.js application
 
 **Total Points**: 12 points out of 10 required points
 
