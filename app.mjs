@@ -1,8 +1,11 @@
+import './config.mjs';
 import express from 'express'
 import mongoose from 'mongoose';
 
 import path from 'path'
 import { fileURLToPath } from 'url';
+
+mongoose.connect(process.env.DSN);
 
 
 const app = express();
