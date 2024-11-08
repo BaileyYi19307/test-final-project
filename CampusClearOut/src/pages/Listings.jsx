@@ -4,7 +4,7 @@ import Listing from '../components/Listing';
 const API = import.meta.env.VITE_BACKEND_URL;
 
 
-function Listings(){
+export function Listings(){
   const [listings,setListings] = useState([])
 
   //retrive all the listings
@@ -27,9 +27,10 @@ function Listings(){
     return(
         <div>
         <header>
+          <p> This is the main listings Page</p>
         </header>
         <main>
-          {
+          {/* {
           //render all the listings on the page
           //for each listing, make a Listing component
           listings.map(listing => {
@@ -42,7 +43,7 @@ function Listings(){
               />
             );
           })
-        }
+        } */}
           <div>
           <h1>Create a New Listing</h1>
           <ListingForm />
@@ -52,4 +53,3 @@ function Listings(){
     );
 }
 
-export default Listings;

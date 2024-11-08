@@ -1,18 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Listings from './pages/Listings'
-
-// const API = import.meta.env.VITE_BACKEND_URL;
-// const response = await fetch(`${API}/products`);
+import './App.css';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { Dashboard } from './pages/Dashboard';
+import { Listings } from './pages/Listings';
+import { MyListings } from './pages/MyListings';
+import { MyRequests } from './pages/MyRequests';
 
 function App() {
-
   return (
-    <div>
-      <Listings />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Listings />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/mylistings" element={<MyListings />} />
+        <Route path="/dashboard/myrequests" element={<MyRequests />} />
+      </Routes>
+    </Router>
   );
 }
 

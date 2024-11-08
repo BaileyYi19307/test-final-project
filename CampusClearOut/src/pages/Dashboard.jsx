@@ -1,6 +1,7 @@
 import React from 'react';
+import {Link } from 'react-router-dom';
 
-function Dashboard(){
+export function Dashboard(){
     return(
         <div>
         <header>
@@ -8,9 +9,13 @@ function Dashboard(){
         </header>
         <main>
           <p> This is my dashboard page</p>
-        </main>
+          <nav>
+        <Link to="/dashboard/mylistings">My Listings</Link> | 
+        <Link to="/dashboard/myrequests">My Requests</Link>
+      </nav>
+
+      </main>
       </div>
     );
 }
 
-export default Listings;
