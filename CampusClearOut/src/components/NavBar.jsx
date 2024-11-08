@@ -7,8 +7,10 @@ export function NavBar() {
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand as={Link} to="/">Campus Clearout</Navbar.Brand>
-            <Nav.Link as={Link} to="/">Listings</Nav.Link>|
+        <Nav className="me-auto">
+            <Nav.Link as={Link} to="/">Listings</Nav.Link>
             <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
+        </Nav>
       </Container>
     </Navbar>
   );
