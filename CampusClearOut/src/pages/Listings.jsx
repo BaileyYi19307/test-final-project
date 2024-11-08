@@ -1,6 +1,8 @@
 import React, { useState,useEffect } from 'react';
 import ListingForm from '../components/ListingForm';
 import Listing from '../components/Listing';
+import { Link } from 'react-router-dom';
+
 const API = import.meta.env.VITE_BACKEND_URL;
 
 
@@ -26,28 +28,23 @@ export function Listings(){
 
     return(
         <div>
-        <header>
-          <p> This is the main listings Page</p>
-        </header>
+          
         <main>
-          {/* {
+        <p> This is the main listings Page</p>
+          {
           //render all the listings on the page
           //for each listing, make a Listing component
           listings.map(listing => {
             return (
               <Listing 
-                key={listing.id} 
+                key={listing._id} 
                 title={listing.title} 
                 description={listing.description} 
                 price={listing.price} 
               />
             );
           })
-        } */}
-          <div>
-          <h1>Create a New Listing</h1>
-          <ListingForm />
-          </div>
+        }
         </main>
       </div>
     );

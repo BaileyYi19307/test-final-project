@@ -5,7 +5,7 @@ import '../App.css';
 function Listing(props){
 
     return(
-        <div class="listing">
+        <div className="listing">
             <h2>{props.title}</h2>
             <p>{props.description}</p>
             <p>{props.price}</p>
