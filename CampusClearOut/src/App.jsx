@@ -1,4 +1,3 @@
-import './App.css';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Dashboard } from './pages/Dashboard';
 import { Listings } from './pages/Listings';
@@ -6,6 +5,8 @@ import { MyListings } from './pages/MyListings';
 import { MyRequests } from './pages/MyRequests';
 import MainLayout from './MainLayout';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+
 import { ListingDetails } from './pages/ListingDetails';
 
 function App() {

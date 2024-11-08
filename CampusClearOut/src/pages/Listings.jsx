@@ -24,13 +24,12 @@ export function Listings(){
 
     return(
       <div>
-      <main>
         <Container>
           <h2 className="text-center my-4">Available Listings</h2>
           <Row className="listing-grid">
             {listings.map(listing => (
-              <Col key={listing._id} xs={12} sm={6} lg={4} className="d-flex align-items-stretch">
-                <div className="listing-card" style={{ width: '100%', margin: '1rem', padding: '1rem', border: '1px solid #ddd', borderRadius: '8px' }}>
+              <Col key={listing._id} xs={12} sm={6} md={4} lg={3} className="d-flex align-items-stretch">
+              <div className="listing-card" style={{ width: '100%', margin: '1rem', padding: '1rem', border: '1px solid #ddd', borderRadius: '8px' }}>
                   <h3>{listing.title}</h3>
                   <p>{listing.description}</p>
                   <p><strong>Price:</strong> ${listing.price}</p>
@@ -44,7 +43,6 @@ export function Listings(){
             ))}
           </Row>
         </Container>
-      </main>
     </div>
     );
 }

@@ -3,14 +3,13 @@ import { NavBar } from './components/Navbar';
 
 const MainLayout = ({ children }) => {
   return (
-    <div>
-      <header>
+    <>
         <NavBar />
-      </header>
-      <main>
+        <div>
         {children} 
-      </main>
-    </div>
+        </div>
+
+    </>
   );
 };
 
