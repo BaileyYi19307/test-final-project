@@ -6,7 +6,7 @@ import { MyListings } from './pages/MyListings';
 import { MyRequests } from './pages/MyRequests';
 import MainLayout from './MainLayout';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { ListingDetails } from './pages/ListingDetails';
 
 function App() {
   return (
@@ -14,6 +14,8 @@ function App() {
       <MainLayout>
         <Routes>
           <Route path="/" element={<Listings />} />
+          {/* Routes for each specific post */}
+          <Route path="/listings/:postId" element={<ListingDetails />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard/mylistings" element={<MyListings />} />
           <Route path="/dashboard/myrequests" element={<MyRequests />} />

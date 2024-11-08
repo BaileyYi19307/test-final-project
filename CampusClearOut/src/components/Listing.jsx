@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button } from 'react-bootstrap'; // Import Bootstrap components
+import { Card, Button } from 'react-bootstrap'; 
 import '../App.css';
 
 function Listing(props) {
