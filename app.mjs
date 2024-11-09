@@ -37,9 +37,28 @@ app.get('/listings',async(req,res)=>{
     const listings = await Listing.find();
     console.log("Found these listings",listings);
     res.status(200).json(listings);
-})
+});
   
+//get a specific listing by id
+app.get('/listings/:postId',async(req,res)=>{
+    const postId=req.params.postId;
+    const listing = await Listing.findById(postId);
+    res.json(listing);
+});
   
+
+//handle basic registration
+app.get('/register',async(req,res)=>{
+    console.log("user is attempting to register");
+});
+
+//handle login
+app.get('/login',async(req,res)=>{
+    console.log("user is attempting to log in")
+});
+
+
+
 const PORT = process.env.PORT || 3000
 app.listen(PORT, ()=>{
     console.log(`Server is running on port ${PORT}`);
