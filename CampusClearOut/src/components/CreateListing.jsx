@@ -1,41 +1,43 @@
-import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { Form, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const API = import.meta.env.VITE_BACKEND_URL;
 
 export function CreateListing() {
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [price, setPrice] = useState('');
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [price, setPrice] = useState("");
   const navigate = useNavigate();
 
+  //handle submitting a listing
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const listingData = { title, description, price };
+    //post the data to backend
     try {
       const response = await fetch(`${API}/listings`, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(listingData),
       });
 
       if (response.ok) {
-        console.log('Listing submitted successfully');
+        console.log("Listing submitted successfully");
         // reset form fields
-        setTitle('');
-        setDescription('');
-        setPrice('');
+        setTitle("");
+        setDescription("");
+        setPrice("");
         // navigate back to "My Listings" page
-        navigate('/dashboard/mylistings?created=true');
+        navigate("/dashboard/mylistings?created=true");
       } else {
-        console.log('Failed to submit listing');
+        console.log("Failed to submit listing");
       }
     } catch (error) {
-      console.error('Error submitting listing:', error);
+      console.error("Error submitting listing:", error);
     }
   };
 
