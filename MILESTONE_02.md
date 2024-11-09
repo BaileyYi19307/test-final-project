@@ -11,19 +11,19 @@ Special Instructions for Using Form and / or Login
 
 URL for deployed site 
 ---
-(TODO: add url for your dpeloyed site; should be in this format http://linserv1.cims.nyu.edu:YOUR_PORT_NUMBER)
+http://linserv1.cims.nyu.edu:24452
 
 URL for form 
 ---
-(TODO: add link to a functioning form)
+http://linserv1.cims.nyu.edu:24452/#/dashboard/mylistings/create
 
 URL for form result
 ---
-(TODO: if applicable, add link to page that shows results of submitting form)
+http://127.0.0.1:5173/#/dashboard/mylistings
 
 URL to github that shows line of code where research topic(s) are used / implemented
 --- 
-(TODO: add link to github url that shows line or lines of code that demonstrate in progress work on at least one research topic)
+The entire CampusClearOut directory on GitHub implements React, which was one of my research topics. Key files using React include App.jsx and various components in the src/components/ folder.
 
 References 
 ---
