@@ -27,7 +27,7 @@ The entire CampusClearOut directory on GitHub implements React, which was one of
 
 References 
 ---
-- The `NavBar` component follows the structure from the [React Bootstrap Navbar tutorial](https://react-bootstrap.netlify.app/docs/components/navbar/#home). Code implementation [here in GitHub](https://github.com/nyu-csci-ua-0467-001-002-fall-2024/final-project-BaileyYi19307/blob/master/CampusClearOut/src/components/NavBar.jsx#L5-L33).
-- Backend routes were set up following this [YouTube tutorial](https://www.youtube.com/watch?v=51JCCLjImnA). Code implementation [here on GitHub](https://github.com/nyu-csci-ua-0467-001-002-fall-2024/final-project-BaileyYi19307/blob/master/app.mjs#L18-L62).
-- 
+- The `NavBar` component follows the structure from the [React Bootstrap Navbar tutorial](https://react-bootstrap.netlify.app/docs/components/navbar/#home). My code can be found [here](https://github.com/nyu-csci-ua-0467-001-002-fall-2024/final-project-BaileyYi19307/blob/master/CampusClearOut/src/components/NavBar.jsx#L5-L33).
+- Backend routes were set up following this [YouTube tutorial](https://www.youtube.com/watch?v=51JCCLjImnA). My code can be found [here](https://github.com/nyu-csci-ua-0467-001-002-fall-2024/final-project-BaileyYi19307/blob/master/app.mjs#L18-L62).
+- Set up multipage routing following this [YouTube tutorial](https://www.youtube.com/watch?v=qi32YwjoN2U). My code can be found [here](https://github.com/nyu-csci-ua-0467-001-002-fall-2024/final-project-BaileyYi19307/blob/master/CampusClearOut/src/App.jsx#L13-L44).
 
