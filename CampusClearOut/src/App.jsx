@@ -4,6 +4,8 @@ import { Listings } from "./pages/Listings";
 import { MyListings } from "./pages/MyListings";
 import { MyRequests } from "./pages/MyRequests";
 import { CreateListing } from "./components/CreateListing";
+import { Register } from "./pages/Register";
+import { Login } from "./pages/Login";
 import MainLayout from "./MainLayout";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -17,6 +19,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Listings />} />
           <Route path="/listings/:postId" element={<ListingDetails />} />
+          <Route path="/register" element={<Register/>}/>
+          <Route path="/login" element={<Login/>}/>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard/mylistings" element={<MyListings />} />
           <Route
