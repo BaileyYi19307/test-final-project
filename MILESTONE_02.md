@@ -7,10 +7,7 @@ https://github.com/nyu-csci-ua-0467-001-002-fall-2024/final-project-BaileyYi1930
 
 Special Instructions for Using Form and / or Login
 ---
-- **Create a Listing**: Navigate to the form at [Create New Listing](http://linserv1.cims.nyu.edu:24452/#/dashboard/mylistings/create) to submit a new listing. After submission, the listing will appear on both the [My Listings page](http://linserv1.cims.nyu.edu:24452/#/dashboard/mylistings) and the [Main Listings page](http://linserv1.cims.nyu.edu:24452/#/).
-
-- **Deleting Listings**: Listings can be deleted directly from the [My Listings page](http://linserv1.cims.nyu.edu:24452/#/dashboard/mylistings).
-
+(TODO: if your app requires special instructions to use or if your app requires authentication, add information here; otherwise, leave blank)
 
 URL for deployed site 
 ---
