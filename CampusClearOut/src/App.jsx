@@ -11,12 +11,12 @@ import MainLayout from "./MainLayout"; // layout wrapper for shared components l
 import "bootstrap/dist/css/bootstrap.min.css"; // import bootstrap for styling
 import "./App.css"; // app-specific styling
 import { ListingDetails } from "./pages/ListingDetails";
-import { AuthProvider } from "./pages/Auth";
+// import { AuthProvider } from "./pages/Auth";
 
 function App() {
   return (
     // router is the root component that enables client-side routing in the app
-    <AuthProvider>
+    // <AuthProvider>
       <Router>
         {/* mainlayout is a layout wrapper that contains the navbar and other shared ui elements */}
         <MainLayout>
@@ -47,7 +47,7 @@ function App() {
           </Routes>
         </MainLayout>
       </Router>
-    </AuthProvider>
+    // </AuthProvider>
 
   );
 }

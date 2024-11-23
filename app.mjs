@@ -165,19 +165,14 @@ app.delete("/api/listings/:id", async (req, res) => {
 });
 
 
-// route to fetch User 1's listings
-app.get('/dashboard/my-listings/:userId', async (req, res) => {
-  const { userId } = req.params;
+// endpoint to fetch all users
+app.get('/api/users', async (req, res) => {
   try {
-    // find user 1 by userId
-    const user = await User.findById(userId).populate('listings');
-    if (!user) return res.status(404).send('User not found');
-
-    const listings = await Listing.find({ _id: { $in: user.listings } }).populate('requests');
-    res.json(listings);
+    const users = await User.find(); 
+    res.json(users); // send the users data back
   } catch (err) {
     console.error(err);
-    res.status(500).send('Server error');
+    res.status(500).send('server error');
   }
 });
 
