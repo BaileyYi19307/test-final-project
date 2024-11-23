@@ -11,9 +11,8 @@ export function Register() {
   const [showSuccessMessage, setShowSuccessMessage] = useState("");
   const [users, setUsers] = useState([]); 
 
-  // fetch users after successful registration
+  // fetch users 
   useEffect(() => {
-    if (showSuccessMessage) {
       fetch(`${API}/api/users`)
         .then((response) => response.json())
         .then((userData) => {
@@ -21,8 +20,7 @@ export function Register() {
           console.log("Fetched users:", userData);
         })
         .catch((error) => console.error("Error fetching users:", error));
-    }
-  }, [showSuccessMessage]);
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault(); 
@@ -68,7 +66,7 @@ export function Register() {
         <ul>
           {users.map((user) => (
             <li key={user._id}>
-              {user.username} - {user.email}
+              Username:{user.username} Email: {user.email}
             </li>
           ))}
         </ul>
