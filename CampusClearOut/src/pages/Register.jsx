@@ -21,12 +21,15 @@ export function Register(){
         console.log("Registration data being sent:", registrationData);
         //post the data to backend
         try {
-            const response = await fetch(`${API}/register`, {
+            // const response = await fetch(`${API}/register`, {
+
+            const response = await fetch(`${API}/api/register`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
               },
               body: JSON.stringify(registrationData),
+              credentials: "include"
             });
       
             if (response.ok) {
@@ -58,7 +61,7 @@ export function Register(){
                     placeholder="Enter your name"
                 />
             </Form.Group>
-            <Form.Group controlId="emailAdress">
+            <Form.Group controlId="emailAddress">
                 <Form.Label>Email Address:</Form.Label>
                 <Form.Control
                     type="text"
