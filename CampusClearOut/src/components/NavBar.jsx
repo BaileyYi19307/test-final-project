@@ -1,31 +1,46 @@
 import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../pages/Auth";
 
 export function NavBar() {
+
+  const {authUser,isLoggedIn,logout}=useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      const response = await fetch(`/api/logout`, { method: "POST", credentials: "include" });
+      if (response.ok) {
+        //clear user data on logout
+        logout();
+        //redirect to login page after logout
+        navigate("/login"); 
+      } else {
+        console.error("Failed to log out");
+      }
+    } catch (error) {
+      console.error("Error during logout:", error);
+    }
+  };
+
+
   return (
-    
-    // bootstrap Navbar component with expand="lg" to make it responsive at large screens and bg="light" for a light background
-    <Navbar expand="lg" bg="light"> 
+    <Navbar expand="lg" bg="light">
       <Container>
-        
-        {/* creates clickable brand logo that links to the homepage */}
-        <Navbar.Brand as={Link} to="/">
-          Campus Clearout
-        </Navbar.Brand>
-        
-        {/* nav section for navigation links, className="me-auto" adds margin to the right, pushing links to the left */}
+        <Navbar.Brand as={Link} to="/">Campus Clearout</Navbar.Brand>
         <Nav className="me-auto">
-          
-          {/* Nav.Link to homepage, using React Router's Link to handle routing */}
-          <Nav.Link as={Link} to="/">
-            Listings
-          </Nav.Link>
-          
-          {/* Nav.Link to dashboard page, using React Router's Link for navigation */}
-          <Nav.Link as={Link} to="/dashboard">
-            Dashboard
-          </Nav.Link>
+          <Nav.Link as={Link} to="/">Listings</Nav.Link>
+          <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
+        </Nav>
+        <Nav>
+          {isLoggedIn ? ( // check if user is logged in
+            <NavDropdown title={`Welcome, ${authUser.username}`} id="navbarScrollingDropdown">
+              <NavDropdown.Item onClick={handleLogout}>Logout</NavDropdown.Item>
+            </NavDropdown>
+          ) : (
+            <Nav.Link as={Link} to="/login">Login</Nav.Link>
+          )}
         </Nav>
       </Container>
     </Navbar>
