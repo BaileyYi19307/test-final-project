@@ -2,11 +2,12 @@ import React from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../pages/Auth";
+const API = import.meta.env.VITE_BACKEND_URL;
 
 export function NavBar() {
   const { authUser, isLoggedIn, logout } = useAuth();
   const navigate = useNavigate();
-
+  console.log(`API for logout: ${API}`)
   const handleLogout = async () => {
     try {
       const response = await fetch(`${API}/api/logout`, {

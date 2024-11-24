@@ -15,8 +15,8 @@ const __dirname = path.dirname(__filename);
 
 app.use(
   cors({
-    origin: ["http://127.0.0.1:5173", "http://localhost:5173"],
-    credentials: true,
+	  origin: 'http://linserv1.cims.nyu.edu:24452',
+	  credentials: true
   })
 );
 
@@ -31,7 +31,7 @@ app.use(
 );
 
 //adding protected routes here
-const authRequiredPaths = ["${API}/api/current-user"];
+const authRequiredPaths = ["/api/current-user"];
 
 //check if the user is authenticated before accessing protected routes
 app.use((req, res, next) => {
@@ -43,8 +43,14 @@ app.use((req, res, next) => {
   next();
 });
 
+//test
+app.get("/api", async (req, res) => {
+  console.log("testing api is running");
+	res.status(200).json({"messaege":"testing"});
+});
+
 //post a listing
-app.post("${API}/api/listings", async (req, res) => {
+app.post("/api/listings", async (req, res) => {
   console.log("received data:", req.body);
   try {
     const listing = new Listing(req.body);
@@ -58,7 +64,7 @@ app.post("${API}/api/listings", async (req, res) => {
 });
 
 //retrieve all listings from database
-app.get("${API}/api/listings", async (req, res) => {
+app.get("/api/listings", async (req, res) => {
   console.log("Getting all listings...");
   const listings = await Listing.find();
   console.log("Found these listings", listings);
@@ -66,14 +72,14 @@ app.get("${API}/api/listings", async (req, res) => {
 });
 
 //get a specific listing by id
-app.get("${API}/api/listings/:postId", async (req, res) => {
+app.get("/api/listings/:postId", async (req, res) => {
   const postId = req.params.postId;
   const listing = await Listing.findById(postId);
   res.json(listing);
 });
 
 //handle basic registration
-app.post("${API}/api/register", async (req, res) => {
+app.post("/api/register", async (req, res) => {
   console.log("user is attempting to register");
   console.log("received data:", req.body); //currently only has the username
   const { username, emailAddress, password } = req.body;
@@ -100,7 +106,7 @@ app.post("${API}/api/register", async (req, res) => {
   }
 });
 
-app.post("${API}/api/login", async (req, res) => {
+app.post("/api/login", async (req, res) => {
   const { email, password } = req.body;
   console.log("The req body is", req.body);
   //check that both email and password are available
@@ -134,7 +140,7 @@ app.post("${API}/api/login", async (req, res) => {
   }
 });
 
-app.post("${API}/api/logout", (req, res) => {
+app.post("/api/logout", (req, res) => {
   //destroy session for user
   req.session.destroy((err) => {
     if (err) return res.status(500).json({ message: "Logout failed" });
@@ -144,7 +150,7 @@ app.post("${API}/api/logout", (req, res) => {
   });
 });
 
-app.get("${API}/api/current-user", (req, res) => {
+app.get("/api/current-user", (req, res) => {
   if (req.session.user) {
     console.log("Logged-in user:", req.session.user);
     return res.status(200).json({ user: req.session.user });
@@ -155,14 +161,15 @@ app.get("${API}/api/current-user", (req, res) => {
 });
 
 //delete specific listing by id
-app.delete("${API}/api/listings/:id", async (req, res) => {
+app.delete("/api/listings/:id", async (req, res) => {
   const listingId = req.params.id;
   await Listing.findByIdAndDelete(listingId);
   res.status(200).json({ message: "Listing deleted successfully" });
 });
 
 // endpoint to fetch all users
-app.get("${API}/api/users", async (req, res) => {
+app.get("/api/users", async (req, res) => {
+	console.log("showing users..........")
   try {
     const users = await User.find();
     res.json(users); // send the users data back
