@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-// import { useAuth } from "./Auth";
+import { useAuth } from "./Auth";
+
+const API = import.meta.env.VITE_BACKEND_URL;
 
 export function Login() {
   //access login function from AuthContent
-  const {login}=useAuth();
+  const { login } = useAuth();
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState(null);
@@ -14,12 +16,12 @@ export function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     //clear previous error messages
-    setErrorMessage(null); 
+    setErrorMessage(null);
 
     const loginData = { email: emailAddress, password };
 
     try {
-      const response = await fetch(`/api/login`, {
+      const response = await fetch(`${API}/api/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(loginData),
@@ -27,11 +29,11 @@ export function Login() {
       });
 
       if (response.ok) {
-        const data=await response.json();
+        const data = await response.json();
         //update auth state with logged-in user
-        login(data.user); 
+        login(data.user);
         // redirect to the homepage
-        navigate("/"); 
+        navigate("/");
       } else {
         const errorData = await response.json();
         setErrorMessage(errorData.message || "Login failed. Please try again.");
@@ -67,9 +69,7 @@ export function Login() {
             placeholder="Enter your password"
           />
         </Form.Group>
-        <Button type="submit">
-          Submit
-        </Button>
+        <Button type="submit">Submit</Button>
       </Form>
     </div>
   );

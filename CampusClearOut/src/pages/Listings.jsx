@@ -6,10 +6,11 @@ const API = import.meta.env.VITE_BACKEND_URL;
 
 export function Listings() {
   const [listings, setListings] = useState([]);
+  console.log("I am Ray");
 
   //retrive all the listings
   useEffect(() => {
-    const response = fetch(`api/listings`)
+    const response = fetch(`${API}/api/listings`)
       .then((response) => response.json())
       .then((listingData) => {
         setListings(listingData);

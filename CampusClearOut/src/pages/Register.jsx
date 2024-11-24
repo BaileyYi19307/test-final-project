@@ -9,42 +9,42 @@ export function Register() {
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
   const [showSuccessMessage, setShowSuccessMessage] = useState("");
-  const [users, setUsers] = useState([]); 
+  const [users, setUsers] = useState([]);
 
-  // fetch users 
+  // fetch users
   useEffect(() => {
-      fetch(`${API}/api/users`)
-        .then((response) => response.json())
-        .then((userData) => {
-          setUsers(userData); // set the fetched users
-          console.log("Fetched users:", userData);
-        })
-        .catch((error) => console.error("Error fetching users:", error));
+    fetch(`${API}/api/users`)
+      .then((response) => response.json())
+      .then((userData) => {
+        setUsers(userData); // set the fetched users
+        console.log("Fetched users:", userData);
+      })
+      .catch((error) => console.error("Error fetching users:", error));
   }, []);
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     const registrationData = { username, emailAddress, password };
 
     try {
+      console.log(`${API}/api`);
       const response = await fetch(`${API}/api/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(registrationData),
-        credentials: "include", 
+        credentials: "include",
       });
 
       if (response.ok) {
         console.log("Successfully registered");
         setShowSuccessMessage("Successfully registered!");
-        
+
         // reset form fields
         setUsername("");
         setEmailAddress("");
         setPassword("");
- 
       } else {
         console.log("Failed to submit registration data");
       }
