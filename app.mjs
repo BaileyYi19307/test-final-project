@@ -13,12 +13,22 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.use(
-  cors({
-	  origin: 'http://linserv1.cims.nyu.edu:24452',
-	  credentials: true
-  })
-);
+// app.use(
+//   cors({
+// 	  origin: 'http://linserv1.cims.nyu.edu:24452',
+// 	  credentials: true
+//   })
+// );
+
+// app.use(
+//   cors({
+// 	  origin: 'http://127.0.0.1:5174/',
+// 	  credentials: true
+//   })
+// );
+
+app.use(cors()); // this is the most basic cors (it whitelists all origins)
+
 
 app.use(express.json());
 app.use(
@@ -179,7 +189,7 @@ app.get("/api/users", async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
